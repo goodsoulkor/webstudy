@@ -4,21 +4,27 @@
         <style>
             #container {
                 display: flex;
-                flex-direction: row;
+                flex-direction: row ;
+                border: 3px solid red;
             }
             #container div {
                 border: 3px solid gray;
             }
             #first {
                 /* flex-basis: 60px; */
-                flex-
+                /* flex-grow: 1; */
+                flex-shrink: 1;
+            }
+            #second {
+                /* flex-grow: 1; */
+                flex-shrink: 2;
             }
         </style>
     </head>
     <body>
         <div id="container">
-            <div id="first">item1</div>
-            <div id="second">item2</div>
+            <div id="first">item1 item1 item1 item1</div>
+            <div id="second">item2 item2 item2 item2</div>
         </div>
     </body>
 </html>
