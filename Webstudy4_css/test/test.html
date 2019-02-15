@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #stage {
+            height: 2000px;
+        }
+        #navi {
+            /* 
+            포지션을 fixed로 했을 때
+            box-sizing을 border-box로 주고
+            좌우 여백을 0으로 만들어야 width를 100%로 했을 때
+            화면에 딱 맞게 들어간다.
+            */
+            box-sizing: border-box;
+            border: 1px solid #ff0000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            background-color: black;
+            color: white;
+            z-index: 1;
+        }
+        #content {
+            /* border: 1px solid red; */
+            width: 100%;
+            padding-top: 40px;
+            /* height: 10000px; */
+        }
+        #box1 {
+            box-sizing: border-box;
+            border: 10px solid green;
+            width: 300px;
+        }
+        #box2 {
+            border: 10px solid blue;
+            width: 300px;
+        }
+        #box3 {
+            border: 10px solid red;
+            position: absolute;
+            top: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="stage">
+        <div id="navi">
+            navigation
+        </div>
+        <div id="content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate tempora sed a sint alias repellat odit obcaecati, vel aliquam omnis sit unde, minima labore qui dignissimos, nulla magni quis expedita.
+        </div>
+        <div id="content2">content2</div>
+        <div id="box1">box</div>
+        <div id="box2">box</div>
+        <div id="box3">box</div>
+    </div>
+</body>
+</html>

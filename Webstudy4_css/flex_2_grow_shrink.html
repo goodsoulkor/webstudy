@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            background-color: powderblue;
+            height: 200px;
+            display: flex;
+            flex-direction: row;         
+        }
+        .item {
+            background-color: tomato;
+            color: white;
+            border: 1px solid white;
+            /* flex-grow: 1; */
+            /* 
+            flex-grow는 부모 태그의 영역 만큼 자식 태그의 영역 크기를 키워준다.
+            0 - 크기를 키우지 않는다.
+            1 - 크기를 키우고 숫자는 비율을 나타낸다. -> 1과 2를 지정하면 1/3, 2/3의 비율로 채운다.
+            */
+        }
+        .item:nth-child(1){
+            /* flex-grow: 2; */
+            flex-basis: 300px;
+            /* 
+            flex-basis는 해당 영역의 크기를 지정한다.
+            flex-direction이 row인 경우는 가로크기 column인 경우 새로크기가 지정된다.
+            */
+            flex-shrink: 1;
+            /* 
+            flex-shrink는 부모 태그 영역이 줄어들 경우(화면이 줄어들 경우) 비율에 맞춰 영역을 줄이는 역할을 한다.
+            0 - 줄어들지 않고 고정 영역을 유지한다.
+            1 - 줄어들고 숫자는 비율을 나타낸다. -> 각각 1과 2를 지정하면 2로 지정된 영역이 2배속으로 줄어든다.
+            */
+        }
+        .item:nth-child(2){
+            /* flex-grow: 2; */
+            flex-basis: 300px;
+            flex-shrink: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
